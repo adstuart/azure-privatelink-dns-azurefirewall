@@ -14,7 +14,7 @@ This article is not a full explanation of the above, please consider the followi
 
 This feature was released in public preview on 30th June 2020. Please see the official documentation here. https://docs.microsoft.com/en-us/azure/firewall-manager/dns-settings
 
-In short, when enabled, DNS Proxy will listen on port 53 for requests and forward them, by default to Azure DNS, or to the customer DNS server specified within Azure Firewall customer DNS settings.
+In short, when enabled, DNS Proxy will listen on port 53 for requests and forward them, by default to Azure DNS, or to the custom DNS server specified within Azure Firewall custom DNS settings.
 
 ## Why does this help Private Link?
 
