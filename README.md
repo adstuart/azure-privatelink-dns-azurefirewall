@@ -28,7 +28,7 @@ This article shows how the new Azure Firewall DNS Proxy feature can be used in t
 
 The following diagram shows the lab environment used to show this functionaility working, in short an On-Premises environment connected to Azure via an ExpressRoute Private Peering. The On-Premises location has a DNS server that is configured to forward unknown DNS requests to an external ISP DNS infrastrucutre. The DNS server is also configured to conditionally forward *.database.windows.net* to the Private IP address of Azure Firewall. An Azure Firewall inside of a Virtual Network that is linked to an Azure DNS Private Zone for privatelink.database.windows.net.
 
-![Topology](images/azfw-dns.jpeg)
+![Topology](images/azfw-dns.jpg)
 
 ## DNS packet walk
 
