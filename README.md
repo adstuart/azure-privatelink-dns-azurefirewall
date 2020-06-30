@@ -6,9 +6,9 @@ When working with Azure Private Link it is required to modify default DNS forwar
 
 This article is not a full explanation of the above, please consider the following articles required pre-reading to build foundational knowledge before implementing this solution.
 
-aka.ms/whatisprivatelink Introductory video on Private Link
-aka.ms/whyprivatelink High level white paper exploring the requirement for Private Link
-aka.ms/privatelinkdns Technical white paper introducing the DNS challenge when working with Private Link
+- aka.ms/whatisprivatelink Introductory video on Private Link
+- aka.ms/whyprivatelink High level white paper exploring the requirement for Private Link
+- aka.ms/privatelinkdns Technical white paper introducing the DNS challenge when working with Private Link
 
 ## Azure Firewall DNS Proxy
 
