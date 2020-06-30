@@ -41,4 +41,4 @@ The following diagram shows the lab environment used to achieve this configurati
 - [5] Azure public DNS returns CNAME record for sql321.database.windows.net pointing at sql321.privatelink.database.windows.net
 - [6] As the Virtual Network within which the Azure Firewall resides is linked to an Azure DNS Private Zone defined for privatelink.database.windows.net, the A records inside of this Private Zone is returned, as opposed to the public A record.
 - [7] Azure DNS returns this records back to the On-Premises DNS server which in turn sends it back to the client
-- [8] The On-Premises client then used the private IP address 10.2.1.5 for access to the Azure SQL server
+- [8] The On-Premises client then uses the private IP address 10.2.1.5 for access to the Azure SQL server
