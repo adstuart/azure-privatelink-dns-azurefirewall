@@ -18,15 +18,15 @@ In short, when enabled, DNS Proxy will listen on port 53 for requests and forwar
 
 ## Why does this help Private Link?
 
-As explained here https://github.com/dmauser/PrivateLink/tree/master/DNS-Integration-Scenarios#4-on-premises-dns-integration one of the big benefits of Azure Private Link is the ability to consume Microsoft PaaS services on Private IP's over Privately address hybrid connections; Azure ExpressRoute Private Peering and Site-to-Site VPNs. However, this benefit also comes with the challenge of forwarding DNS requests from On-Premises to Azure DNS, to benefit from the automated lifecycle management of DNS records that map to your Private Endpoints.
+As explained here https://github.com/dmauser/PrivateLink/tree/master/DNS-Integration-Scenarios#4-on-premises-dns-integration one of the big benefits of Azure Private Link is the ability to consume Microsoft PaaS services on Private IP's over Privately addressed hybrid connections; Azure ExpressRoute Private Peering and Site-to-Site VPNs. However, this benefit also comes with the challenge of forwarding DNS requests from On-Premises to Azure DNS, to benefit from the automated lifecycle management of DNS records that map to your Private Endpoints.
 
-At the core of this problem, is that only resources inside of a Virtual Network can query the 168.63.129.16 "special" address used by Azure DNS Private Zones to recieve requests. Therefore DNS requests from On-Premises need to be "proxied" via a resource inside of the Virtual Network. Some customers will use their existing DNS servers to acomplish this; E.g. Azure DNS on Windows Server, Infoblox, BIND. However, there are some customers that do not want to manage this DNS infrastrucutre in the "VNet", and they would like a PaaS service to perform this function.
+At the core of this problem, is that only resources inside of a Virtual Network can query the 168.63.129.16 "special" address used by Azure DNS Private Zones to recieve requests. Therefore DNS requests from On-Premises need to be "proxied" via a resource inside of the Virtual Network. Some customers will use their existing DNS servers to acomplish this; E.g. Microsoft DNS on Windows Server, Infoblox, BIND. However, there are some customers that do not want to manage this DNS infrastrucutre in the "VNet", and they would like a PaaS service to perform this function.
 
 This article shows how the new Azure Firewall DNS Proxy feature can be used in this way.
 
 ## Topology
 
-The following diagram shows the lab environment used to show this functionaility working, in short an On-Premises environment connected to Azure via an ExpressRoute Private Peering. The On-Premises location has a DNS server that is configured to forward unknown DNS requests to an external ISP DNS infrastrucutre. The DNS server is also configured to conditionally forward *.database.windows.net* to the Private IP address of Azure Firewall. An Azure Firewall inside of a Virtual Network that is linked to an Azure DNS Private Zone for privatelink.database.windows.net.
+The following diagram shows the lab environment used to achieve this configuration. In short an On-Premises environment connected to Azure via an ExpressRoute Private Peering, the On-Premises location has a DNS server that is configured to forward unknown DNS requests to an external ISP DNS infrastrucutre. The DNS server is also configured to conditionally forward *.database.windows.net* to the Private IP address of Azure Firewall. An Azure Firewall inside of a Virtual Network that is linked to an Azure DNS Private Zone for privatelink.database.windows.net.
 
 (Click image to fix see larger file and fix resolution, will upload better image soon)
 
