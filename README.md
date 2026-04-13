@@ -1,3 +1,13 @@
+> [!CAUTION]
+> **This repo is archived and no longer maintained (April 2026).** The Azure Firewall DNS Proxy approach described here has been superseded by [Azure DNS Private Resolver](https://learn.microsoft.com/en-us/azure/dns/dns-private-resolver-overview), which is now the recommended managed solution for hybrid DNS forwarding with Azure Private Link.
+>
+> **Use these instead:**
+> - [Azure DNS Private Resolver architecture](https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/azure-dns-private-resolver)
+> - [Hybrid DNS with Private Resolver](https://learn.microsoft.com/en-us/azure/dns/private-resolver-hybrid-dns)
+> - [Private Link and DNS integration at scale (CAF)](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale)
+
+---
+
 # Using Azure Firewall as DNS Forwarder with Private Link
 
 ## Introduction
